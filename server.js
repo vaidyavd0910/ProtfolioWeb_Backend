@@ -29,10 +29,11 @@ app.post("/api/contact", async (req, res) => {
       return res.status(400).json({ error: "All fields are required" });
     }
 
-    const newContact = new Contact({ name, email, subject, message });
-    await newContact.save();
+    // const newContact = new Contact({ name, email, subject, message });
+    // await newContact.save();
 
-    res.status(201).json({ success: true, message: "Contact form submitted successfully", data: newContact });
+    // res.status(201).json({ success: true, message: "Contact form submitted successfully", data: newContact });
+    res.status(201).json({ success: true, message: "Contact form submitted successfully" });
   } catch (error) {
     res.status(500).json({ error: "Server error", details: error.message });
   }
