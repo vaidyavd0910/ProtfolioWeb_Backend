@@ -16,6 +16,10 @@ connectDB();
 app.use(cors());
 app.use(bodyParser.json());
 
+
+app.get("/test",(req,res)=>{
+  res.send("hi");
+})
 // API route to handle form submission
 app.post("/api/contact", async (req, res) => {
   try {
